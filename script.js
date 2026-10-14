@@ -1,5 +1,5 @@
 /* ==========================================================
-   SWEETHEART / 21ST BIRTHDAY SURPRISE - JAVASCRIPT LOGIC
+   SWEETHEART / 20TH BIRTHDAY SURPRISE - JAVASCRIPT LOGIC
    100% Faithful Interactive Experience
    ========================================================== */
 
@@ -554,7 +554,7 @@ function startRotatingQuotes() {
 // STAGE 6: A LETTER FOR YOU (TYPEWRITER EFFECT)
 // ==========================================================
 const letterParagraphs = [
-  "Twenty-one looks beautiful on you. This birthday isn't just another number, it's the opening page of a chapter you've already started writing in your own quiet, determined way. Every plan you've mapped out, every skill you've been building late into the night, every dream you refuse to let go of, it's all leading somewhere, and today is proof of how far you've come.",
+  "Twenty looks beautiful on you. This birthday isn't just another number, it's the opening page of a chapter you've already started writing in your own quiet, determined way. Every plan you've mapped out, every skill you've been building late into the night, every dream you refuse to let go of, it's all leading somewhere, and today is proof of how far you've come.",
   "\n\nMay this year meet your effort with opportunity, your patience with reward, and your heart with exactly the peace and privacy it deserves. Here's to you, Saima, thoughtful, driven, and only just getting started. 🎂✨"
 ];
 const fullLetterText = letterParagraphs.join('');
