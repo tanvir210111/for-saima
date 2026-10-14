@@ -8,7 +8,7 @@ const bgMusic = document.getElementById('bg-music');
 const musicToggleBtn = document.getElementById('music-toggle-btn');
 const musicIcon = document.getElementById('music-icon');
 const musicText = document.getElementById('music-text');
-let isMusicPlaying = false;
+let isMusicPlaying = true;
 
 // Web Audio API Context for Custom Sound Effects
 let audioCtx = null;
@@ -124,8 +124,8 @@ function startMusic() {
 function pauseMusic() {
   bgMusic.pause();
   isMusicPlaying = false;
-  musicText.textContent = 'MUSIC: OFF';
-  musicIcon.textContent = '🔇';
+  musicText.textContent = 'MUSIC: ON';
+  musicIcon.textContent = '🔊';
 }
 
 musicToggleBtn.addEventListener('click', toggleMusic);
