@@ -1,5 +1,25 @@
+
+// Intro Urdu Shayari Popup handler
+(function setupPoemModal() {
+  const poemOverlay = document.getElementById('poemOverlay');
+  if (poemOverlay) {
+    const poemCloseBtn = document.getElementById('poemCloseBtn');
+    if (poemCloseBtn) {
+      poemCloseBtn.onclick = () => {
+        try { startMusic(); } catch(e) {}
+        try { burstConfetti(50); } catch(e) {}
+        try { playDingSound(); } catch(e) {}
+        poemOverlay.classList.add('closing');
+        setTimeout(() => {
+          poemOverlay.remove();
+        }, 350);
+      };
+    }
+  }
+})();
+
 /* ==========================================================
-   SWEETHEART / 20TH BIRTHDAY SURPRISE - JAVASCRIPT LOGIC
+   SWEETHEART / 19TH BIRTHDAY SURPRISE - JAVASCRIPT LOGIC
    100% Faithful Interactive Experience
    ========================================================== */
 
@@ -251,13 +271,13 @@ function handleUnlock() {
   const card = document.querySelector('.passkey-card');
   const val = input.value.trim();
 
-  // Accept current year 2026 or "2026"
-  if (val === '2026') {
+  // Accept birth year 2007
+  if (val === '2007') {
     error.textContent = '';
     playDingSound();
     switchScreen('screen-passkey', 'screen-fireworks');
   } else {
-    error.textContent = 'Incorrect passkey! Try 2026 😉';
+    error.textContent = 'Incorrect passkey! Try 2007 😉';
     card.classList.remove('shake-anim');
     void card.offsetWidth; // trigger reflow
     card.classList.add('shake-anim');
@@ -502,7 +522,7 @@ function handleOpenGift() {
   // Lift lid and pop out cat
   lid.classList.add('opened');
   cat.classList.add('popped');
-  hint.textContent = '🎉 Surprise! Happy Birthday Saima! 🎉';
+  hint.textContent = '🎉 Surprise! Happy Birthday Juei! 🎉';
 
   burstConfetti(60);
   playDingSound();
@@ -522,7 +542,7 @@ function handleOpenGift() {
 const celebrationQuotes = [
   "Chaand si roshni ho tere har din mein ✨",
   "Hansti rahe tu, khilta rahe ye dil tera 🌸",
-  "Saalgirah mubarak ho, meri pyaari Saima 🎶",
+  "Saalgirah mubarak ho, meri pyaari Juei 🎶",
   "Duaon se bhari ho ye nayi umar teri 💛"
 ];
 let quoteIndex = 0;
@@ -554,8 +574,8 @@ function startRotatingQuotes() {
 // STAGE 6: A LETTER FOR YOU (TYPEWRITER EFFECT)
 // ==========================================================
 const letterParagraphs = [
-  "Twenty looks beautiful on you. This birthday isn't just another number, it's the opening page of a chapter you've already started writing in your own quiet, determined way. Every plan you've mapped out, every skill you've been building late into the night, every dream you refuse to let go of, it's all leading somewhere, and today is proof of how far you've come.",
-  "\n\nMay this year meet your effort with opportunity, your patience with reward, and your heart with exactly the peace and privacy it deserves. Here's to you, Saima, thoughtful, driven, and only just getting started. 🎂✨"
+  "Nineteen looks beautiful on you. This birthday isn't just another number, it's the opening page of a chapter you've already started writing in your own quiet, determined way. Every plan you've mapped out, every skill you've been building late into the night, every dream you refuse to let go of, it's all leading somewhere, and today is proof of how far you've come.",
+  "\n\nMay this year meet your effort with opportunity, your patience with reward, and your heart with exactly the peace and privacy it deserves. Here's to you, Juei, thoughtful, driven, and only just getting started. 🎂✨"
 ];
 const fullLetterText = letterParagraphs.join('');
 
@@ -640,7 +660,7 @@ document.getElementById('one-more-surprise-btn').onclick = () => {
 // STAGE 9: POP EVERY BALLOON GAME
 // ==========================================================
 // Total 18 letters = 18 balloons:
-// "YOU ARE AMAZING" (13) + "SAIMA" (5) = 18 letters!
+// "YOU ARE AMAZING" (13) + "JUEI 💖" (5) = 18 letters!
 const secretLetters = [
   'Y', 'O', 'U', 'A', 'R', 'E', 'A', 'M', 'A', 'Z', 'I', 'N', 'G',
   'J', 'U', 'E', 'I', '💖'
@@ -676,8 +696,8 @@ function setupBalloonGame() {
     row1.appendChild(slot);
   }
 
-  // Row 2: "SAIMA"
-  const phrase2 = "SAIMA";
+  // Row 2: "JUEI 💖"
+  const phrase2 = "JUEI 💖";
   for (let ch of phrase2) {
     if (ch === ' ') continue;
     const slot = document.createElement('span');
